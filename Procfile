@@ -1,0 +1,1 @@
+web: gunicorn messagehub.wsgi --log-file -
