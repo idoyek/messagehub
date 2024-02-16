@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "bd1dbc0d-3eda-4524-828d-98355672ee9c",
+		"name": "Messages Hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21884802",
+		"_collection_link": "https://grey-astronaut-192926.postman.co/workspace/Messages~d51dfadb-a0d4-435f-bd55-a7f5c8b4f40a/collection/21884802-bd1dbc0d-3eda-4524-828d-98355672ee9c?action=share&source=collection_link&creator=21884802"
+	},
+	"item": [
+		{
+			"name": "Write message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://web-service-5agj.onrender.com",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "b9L8uI9gyldoc0CoZ6r89mUeXr5s0r1U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"message\": \"This is a message from karina\",\r\n  \"subject\": \"Test\",\r\n  \"receiver\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/messages/write/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"messages",
+						"write",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All incoming messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/messages/receiver/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"messages",
+						"receiver",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All unread incoming messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/messages/receiver/unread/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"messages",
+						"receiver",
+						"unread",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read message",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://web-service-5agj.onrender.com",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "b9L8uI9gyldoc0CoZ6r89mUeXr5s0r1U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/messages/read/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"messages",
+						"read",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete message",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://web-service-5agj.onrender.com",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "b9L8uI9gyldoc0CoZ6r89mUeXr5s0r1U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/messages/delete/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"messages",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"test\",\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/register/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"karina\",\r\n  \"password\": \"tumtum123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/login/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged in user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://web-service-5agj.onrender.com/api/user/",
+					"protocol": "https",
+					"host": [
+						"web-service-5agj",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
